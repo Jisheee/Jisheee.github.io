@@ -73,6 +73,32 @@
             margin-bottom: 1rem;
         }
 
+        .media-showcase {
+            margin-top: 1.5rem;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .media-video video {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .media-gallery {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .media-gallery img {
+            width: 100%;
+            border-radius: 12px;
+            object-fit: cover;
+            min-height: 140px;
+            box-shadow: var(--shadow);
+        }
+
         .sidebar-section {
             margin-bottom: 2rem;
         }
@@ -109,7 +135,7 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <div class="nav-brand">Jishe</div>
+            <div class="nav-brand">Jc Villaruz</div>
             <ul class="nav-links">
                 <li><a href="../index.html" class="nav-link">Home</a></li>
                 <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
@@ -147,6 +173,21 @@
 
                     <h2>Challenges & Solutions</h2>
                     <p>One of the main challenges was ensuring real-time data consistency across concurrent transactions. This was solved by implementing proper transaction management and locking mechanisms in the PostgreSQL layer, combined with efficient query optimization.</p>
+
+                    <h2>Media Showcase</h2>
+                    <div class="media-showcase">
+                        <div class="media-video">
+                            <video controls poster="../assets/aromatique-video-poster.png">
+                                <source src="../assets/aromatique-demo.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="media-gallery">
+                            <img src="../assets/aromatique-screenshot-1.png" alt="Aromatique screenshot 1">
+                            <img src="../assets/aromatique-screenshot-2.png" alt="Aromatique screenshot 2">
+                            <img src="../assets/aromatique-screenshot-3.png" alt="Aromatique screenshot 3">
+                        </div>
+                    </div>
                 </div>
 
                 <div class="detail-sidebar">

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Manager - Spring Boot</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .project-detail {
+            padding: 40px 20px;
+        }
+
+        .project-header-detail {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .project-header-detail h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .project-header-detail .subtitle {
+            font-size: 1.1rem;
+            color: #6b7280;
+        }
+
+        .detail-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .detail-main h2 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .detail-main ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .detail-main li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .detail-main li:before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">Jc Villaruz</div>
+            <ul class="nav-links">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="../index.html#about" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <a href="../index.html" class="back-link">← Back to Portfolio</a>
+
+        <div class="project-header-detail">
+            <h1>Inventory Manager</h1>
+            <p class="subtitle">Spring Boot Backend Web Application</p>
+        </div>
+
+        <div class="project-detail">
+            <div class="detail-content">
+                <div class="detail-main">
+                    <h2>Project Overview</h2>
+                    <p>This project is a Spring Boot inventory management system built to showcase backend web development skills, including REST APIs, data persistence, and backend business logic.</p>
+
+                    <h2>Key Features</h2>
+                    <ul>
+                        <li>REST API endpoints for inventory CRUD operations</li>
+                        <li>Spring Data JPA integration for persistence</li>
+                        <li>Support for product categories and stock levels</li>
+                        <li>Validation and error handling in API requests</li>
+                        <li>Lightweight backend architecture ready for a frontend</li>
+                    </ul>
+
+                    <h2>Technical Implementation</h2>
+                    <p>The backend uses Spring Boot and Spring Data JPA to manage an inventory database. The application exposes secure RESTful endpoints and includes a service layer for business logic and validation.</p>
+
+                    <h2>Learning Value</h2>
+                    <p>This project demonstrates how to design and build backend systems with Java Spring Boot, focusing on maintainability, testability, and clean API design.</p>
+                </div>
+
+                <div class="detail-sidebar">
+                    <div class="sidebar-section">
+                        <h3>Technologies Used</h3>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li style="padding: 0.5rem 0;">Java</li>
+                            <li style="padding: 0.5rem 0;">Spring Boot</li>
+                            <li style="padding: 0.5rem 0;">Spring Data JPA</li>
+                            <li style="padding: 0.5rem 0;">REST API</li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Project Type</h3>
+                        <p>Backend Web App</p>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Status</h3>
+                        <p>In Progress</p>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Highlights</h3>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li style="padding: 0.5rem 0;">✓ Clean RESTful design</li>
+                            <li style="padding: 0.5rem 0;">✓ Database-backed inventory</li>
+                            <li style="padding: 0.5rem 0;">✓ Ready for frontend integration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Jishe's Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

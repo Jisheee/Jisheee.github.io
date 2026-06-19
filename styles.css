@@ -201,6 +201,32 @@ body {
     font-weight: 500;
 }
 
+.media-showcase {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 1.5rem;
+}
+
+.media-video video {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.media-gallery {
+    display: grid;
+    gap: 1rem;
+}
+
+.media-gallery img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    min-height: 140px;
+    box-shadow: var(--shadow);
+}
+
 /* About Section */
 .about {
     padding: 80px 20px;
