@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aromatique - Point of Sale System</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .project-detail {
+            padding: 40px 20px;
+        }
+
+        .project-header-detail {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .project-header-detail h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .project-header-detail .subtitle {
+            font-size: 1.1rem;
+            color: #6b7280;
+        }
+
+        .detail-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .detail-main h2 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .detail-main ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .detail-main li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .detail-main li:before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .detail-sidebar {
+            background-color: var(--light-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            height: fit-content;
+        }
+
+        .detail-sidebar h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .sidebar-section {
+            margin-bottom: 2rem;
+        }
+
+        .sidebar-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .detail-content {
+                grid-template-columns: 1fr;
+            }
+
+            .project-header-detail h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">Jishe</div>
+            <ul class="nav-links">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="../index.html#about" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <a href="../index.html" class="back-link">← Back to Portfolio</a>
+
+        <div class="project-header-detail">
+            <h1>Aromatique</h1>
+            <p class="subtitle">Web-Based Point of Sale System</p>
+        </div>
+
+        <div class="project-detail">
+            <div class="detail-content">
+                <div class="detail-main">
+                    <h2>Project Overview</h2>
+                    <p>Aromatique is a modern, web-based Point of Sale (POS) system designed to streamline transaction management and inventory tracking for businesses. Built with scalable technologies, it provides a responsive interface accessible from any device with a web browser.</p>
+
+                    <h2>Key Features</h2>
+                    <ul>
+                        <li>Real-time transaction processing and management</li>
+                        <li>Comprehensive inventory tracking system</li>
+                        <li>User-friendly dashboard for sales analytics</li>
+                        <li>Product catalog management</li>
+                        <li>Transaction history and reporting</li>
+                        <li>Multi-user support with role-based access</li>
+                    </ul>
+
+                    <h2>Technical Implementation</h2>
+                    <p>The system leverages Node.js for the backend server, providing fast and efficient request handling. PostgreSQL database ensures data integrity and supports complex queries for analytics and reporting. The architecture follows RESTful API principles for scalability and maintainability.</p>
+
+                    <h2>Challenges & Solutions</h2>
+                    <p>One of the main challenges was ensuring real-time data consistency across concurrent transactions. This was solved by implementing proper transaction management and locking mechanisms in the PostgreSQL layer, combined with efficient query optimization.</p>
+                </div>
+
+                <div class="detail-sidebar">
+                    <div class="sidebar-section">
+                        <h3>Technologies Used</h3>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li style="padding: 0.5rem 0;">Node.js</li>
+                            <li style="padding: 0.5rem 0;">PostgreSQL</li>
+                            <li style="padding: 0.5rem 0;">JavaScript (Frontend)</li>
+                            <li style="padding: 0.5rem 0;">RESTful API</li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Project Type</h3>
+                        <p>Web Application</p>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Status</h3>
+                        <p>Completed & Deployed</p>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Key Metrics</h3>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li style="padding: 0.5rem 0;">✓ Fast transaction processing</li>
+                            <li style="padding: 0.5rem 0;">✓ Scalable database schema</li>
+                            <li style="padding: 0.5rem 0;">✓ Cross-platform compatible</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Jishe's Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

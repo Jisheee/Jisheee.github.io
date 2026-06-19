@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Jishe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">Jc Villaruz</div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Welcome to My Portfolio</h1>
+                <p>Full-stack developer showcasing innovative projects in web and desktop applications</p>
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            
+            <div class="projects-grid">
+                <!-- Aromatique Project -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Aromatique</h3>
+                        <span class="project-type">Web Application</span>
+                    </div>
+                    <p class="project-description">A modern web-based Point of Sale system built with Node.js and PostgreSQL, designed for efficient transaction management and inventory tracking.</p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">Node.js</span>
+                        <span class="tech-badge">PostgreSQL</span>
+                        <span class="tech-badge">JavaScript</span>
+                    </div>
+                    <a href="projects/aromatique.html" class="btn btn-secondary">View Project</a>
+                </div>
+
+                <!-- Java POS Project -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>FreshFare</h3>
+                        <span class="project-type">Desktop Application</span>
+                    </div>
+                    <p class="project-description">A desktop-based Point of Sale system developed with Java Swing, featuring a pseudo inventory system with file-based data persistence using FileWriter and BufferedReader.</p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">Java Swing</span>
+                        <span class="tech-badge">File I/O</span>
+                        <span class="tech-badge">Desktop</span>
+                    </div>
+                    <a href="projects/freshfare.html" class="btn btn-secondary">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I'm a developer passionate about building practical solutions that solve real-world problems. My experience spans from web-based systems using modern technologies to desktop applications with robust file management systems.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Jishe's Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
