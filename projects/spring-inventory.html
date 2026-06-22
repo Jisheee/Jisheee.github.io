@@ -60,6 +60,49 @@
             color: var(--primary-color);
             font-weight: bold;
         }
+
+        .detail-sidebar {
+            background-color: var(--light-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            height: fit-content;
+        }
+
+        .detail-sidebar h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .sidebar-section {
+            margin-bottom: 2rem;
+        }
+
+        .sidebar-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .detail-content {
+                grid-template-columns: 1fr;
+            }
+
+            .project-header-detail h1 {
+                font-size: 2rem;
+            }
+        }
     </style>
 </head>
 <body>
