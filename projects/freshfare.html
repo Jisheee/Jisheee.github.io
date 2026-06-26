@@ -7,13 +7,15 @@
     <link rel="stylesheet" href="../styles.css">
     <style>
         .project-detail {
-            padding: 40px 20px;
+            padding: 20px 20px 40px;
         }
 
         .project-header-detail {
             text-align: center;
-            margin-bottom: 3rem;
-            padding-bottom: 2rem;
+            margin-top: 0;
+            margin-bottom: 1.25rem;
+            padding-top: 0;
+            padding-bottom: 1rem;
             border-bottom: 2px solid var(--border-color);
         }
 
@@ -36,15 +38,27 @@
         }
 
         .detail-main h2 {
-            font-size: 1.5rem;
+            font-size: 2rem;
             color: var(--primary-color);
-            margin-top: 2rem;
+            margin-top: 1.25rem;
             margin-bottom: 1rem;
+        }
+
+        .detail-main p {
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
 
         .detail-main ul {
             list-style: none;
+            padding-left: 1.5rem;
+            margin: 0 0 1.5rem;
+        }
+
+        .detail-sidebar ul {
+            list-style: none;
             padding-left: 0;
+            margin: 0 0 1.5rem;
         }
 
         .detail-main li {
@@ -61,6 +75,15 @@
             font-weight: bold;
         }
 
+        .detail-sidebar .feature-list {
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .detail-sidebar .feature-list li {
+            padding: 0.4rem 0;
+        }
+
         .detail-sidebar {
             background-color: var(--light-bg);
             padding: 2rem;
@@ -73,6 +96,27 @@
             margin-bottom: 1rem;
         }
 
+        .detail-meta-list {
+            display: grid;
+            gap: 0.5rem;
+        }
+
+        .detail-meta-item {
+            padding: 0.2rem 0;
+        }
+
+        .detail-meta-label {
+            display: block;
+            font-size: 0.9rem;
+            color: #6b7280;
+            margin-bottom: 0.1rem;
+        }
+
+        .detail-meta-value {
+            font-size: 1rem;
+            color: #1f2937;
+        }
+
         .sidebar-section {
             margin-bottom: 2rem;
         }
@@ -83,7 +127,8 @@
 
         .back-link {
             display: inline-block;
-            margin-bottom: 2rem;
+            padding-top: 1rem;
+            margin-bottom: 1rem;
             color: var(--primary-color);
             text-decoration: none;
             font-weight: 600;
@@ -122,79 +167,100 @@
         <a href="../index.html" class="back-link">← Back to Portfolio</a>
 
         <div class="project-header-detail">
-            <h1>Java POS System</h1>
-            <p class="subtitle">Desktop-Based Point of Sale Application</p>
+            <h1>FreshFare</h1>
+            <p class="subtitle">Java Point-of-Sale System</p>
+        </div>
+
+        <div class="project-media-shell" aria-label="FreshFare media showcase">
+            <div class="project-media-video">
+                <video controls poster="../assets/freshfare-video-poster.png">
+                    <source src="../assets/freshfare-demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="project-media-carousel" data-carousel>
+                <div class="carousel-stage">
+                    <img class="carousel-image active" src="../assets/FreshFare 1.png" alt="FreshFare screenshot 1">
+                    <img class="carousel-image" src="../assets/FreshFare 2.png" alt="FreshFare screenshot 2">
+                    <img class="carousel-image" src="../assets/FreshFare 3.png" alt="FreshFare screenshot 3">
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" type="button" aria-label="Show previous screenshot">←</button>
+                    <span class="carousel-label">Screenshots</span>
+                    <button class="carousel-btn next" type="button" aria-label="Show next screenshot">→</button>
+                </div>
+            </div>
+
+            <div class="image-lightbox" role="dialog" aria-modal="true" aria-label="Large image view">
+                <div class="image-lightbox-content">
+                    <button class="lightbox-close" type="button" aria-label="Close large image view">×</button>
+                    <img src="" alt="" id="lightbox-image">
+                </div>
+            </div>
         </div>
 
         <div class="project-detail">
             <div class="detail-content">
                 <div class="detail-main">
                     <h2>Project Overview</h2>
-                    <p>This is a desktop-based Point of Sale system developed using Java Swing, showcasing fundamental principles of desktop application development. It demonstrates how to build functional applications with a graphical user interface (GUI) and persistent data storage without relying on complex frameworks.</p>
+                    <p>FreshFare is a desktop-based Point of Sale (PoS) system developed using Java Swing. As the first major software project I worked on during my first year at university, it introduced me to object-oriented programming and desktop application development. The system includes features for processing sales, managing product inventory, and storing data using Java File I/O, providing hands-on experience in building a complete desktop application without relying on external frameworks or databases.</p>
 
-                    <h2>Key Features</h2>
+                    <h2>My Contributions</h2>
+                    <p>Developed as a four-member team project. My primary contributions included:</p>
                     <ul>
-                        <li>Intuitive Java Swing GUI for easy user interaction</li>
-                        <li>Pseudo inventory system for product management</li>
-                        <li>Transaction processing and calculation</li>
-                        <li>Data persistence using file-based storage</li>
-                        <li>Real-time inventory updates</li>
-                        <li>Sales tracking and basic reporting</li>
+                        <li>Designed the main POS workflow and screen flow</li>
+                        <li>Built the core GUI screens for sales and inventory</li>
+                        <li>Implemented transaction processing and inventory updates</li>
+                        <li>Managed data persistence using Java File I/O</li>
+                        <li>Tested the app end-to-end for a complete desktop experience</li>
                     </ul>
 
                     <h2>Technical Implementation</h2>
-                    <p>The application uses Java Swing for the user interface, providing a platform-independent GUI. Data persistence is achieved through FileWriter and BufferedReader, storing inventory data in flat text files. This approach demonstrates fundamental file I/O operations and is ideal for smaller-scale applications.</p>
-
-                    <h2>Learning Value</h2>
-                    <p>This project is an excellent example of core programming concepts: GUI design patterns, file I/O operations, data serialization, and state management. While the inventory system uses file-based storage rather than a database, it effectively demonstrates how applications can maintain state across sessions.</p>
-
-                    <h2>Challenges & Solutions</h2>
-                    <p>Managing concurrent file access and ensuring data consistency were key considerations. The solution involved implementing proper file locking mechanisms and careful sequential processing of transactions to prevent data corruption.</p>
-
-                    <h2>Media Showcase</h2>
-                    <div class="media-showcase">
-                        <div class="media-video">
-                            <video controls poster="../assets/freshfare-video-poster.png">
-                                <source src="../assets/freshfare-demo.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                        <div class="media-gallery">
-                            <img src="../assets/freshfare-screenshot-1.png" alt="FreshFare screenshot 1">
-                            <img src="../assets/freshfare-screenshot-2.png" alt="FreshFare screenshot 2">
-                            <img src="../assets/freshfare-screenshot-3.png" alt="FreshFare screenshot 3">
-                        </div>
-                    </div>
+                    <p>FreshFare follows an object-oriented design using Java Swing to create a responsive desktop interface. Product information and transaction data are stored in flat text files through Java File I/O (FileReader, BufferedReader, and FileWriter), allowing inventory records to persist between application sessions. User interactions are handled through Swing event listeners, enabling real-time inventory updates and transaction processing without the need for an external database.</p>
                 </div>
 
                 <div class="detail-sidebar">
                     <div class="sidebar-section">
                         <h3>Technologies Used</h3>
-                        <ul style="list-style: none; padding-left: 0;">
-                            <li style="padding: 0.5rem 0;">Java</li>
-                            <li style="padding: 0.5rem 0;">Java Swing (GUI)</li>
-                            <li style="padding: 0.5rem 0;">File I/O (FileWriter, BufferedReader)</li>
-                            <li style="padding: 0.5rem 0;">OOP Principles</li>
+                        <ul>
+                            <li>Java</li>
+                            <li>Java Swing</li>
+                            <li>Java File I/O</li>
+                            <li>Object-Oriented Programming</li>
                         </ul>
                     </div>
 
                     <div class="sidebar-section">
-                        <h3>Project Type</h3>
-                        <p>Desktop Application</p>
-                    </div>
-
-                    <div class="sidebar-section">
-                        <h3>Status</h3>
-                        <p>Completed</p>
-                    </div>
-
-                    <div class="sidebar-section">
-                        <h3>Key Metrics</h3>
-                        <ul style="list-style: none; padding-left: 0;">
-                            <li style="padding: 0.5rem 0;">✓ Platform independent</li>
-                            <li style="padding: 0.5rem 0;">✓ Lightweight & fast</li>
-                            <li style="padding: 0.5rem 0;">✓ Clean code architecture</li>
+                        <h3>Key Features</h3>
+                        <ul class="feature-list">
+                            <li>Java Swing desktop interface</li>
+                            <li>Pseudo inventory management</li>
+                            <li>Sales transaction processing</li>
+                            <li>File-based data persistence</li>
+                            <li>Real-time inventory updates</li>
                         </ul>
+                    </div>
+                    <div class="sidebar-section">
+                        <h3>Project Details</h3>
+                        <div class="detail-meta-list">
+                            <div class="detail-meta-item">
+                                <span class="detail-meta-label">Type</span>
+                                <span class="detail-meta-value">Desktop Application</span>
+                            </div>
+                            <div class="detail-meta-item">
+                                <span class="detail-meta-label">Team Size</span>
+                                <span class="detail-meta-value">4 Members</span>
+                            </div>
+                            <div class="detail-meta-item">
+                                <span class="detail-meta-label">Development Period</span>
+                                <span class="detail-meta-value">First Year (2024)</span>
+                            </div>
+                            <div class="detail-meta-item">
+                                <span class="detail-meta-label">Status</span>
+                                <span class="detail-meta-value">Completed</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

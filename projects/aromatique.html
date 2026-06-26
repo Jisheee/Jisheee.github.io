@@ -7,13 +7,15 @@
     <link rel="stylesheet" href="../styles.css">
     <style>
         .project-detail {
-            padding: 40px 20px;
+            padding: 20px 20px 40px;
         }
 
         .project-header-detail {
             text-align: center;
-            margin-bottom: 3rem;
-            padding-bottom: 2rem;
+            margin-top: 0;
+            margin-bottom: 1.25rem;
+            padding-top: 0;
+            padding-bottom: 1rem;
             border-bottom: 2px solid var(--border-color);
         }
 
@@ -36,15 +38,27 @@
         }
 
         .detail-main h2 {
-            font-size: 1.5rem;
+            font-size: 2rem;
             color: var(--primary-color);
-            margin-top: 2rem;
+            margin-top: 1.25rem;
             margin-bottom: 1rem;
+        }
+
+        .detail-main p {
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
 
         .detail-main ul {
             list-style: none;
+            padding-left: 1.5rem;
+            margin: 0 0 1.5rem;
+        }
+
+        .detail-sidebar ul {
+            list-style: none;
             padding-left: 0;
+            margin: 0 0 1.5rem;
         }
 
         .detail-main li {
@@ -61,6 +75,15 @@
             font-weight: bold;
         }
 
+        .detail-sidebar .feature-list {
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .detail-sidebar .feature-list li {
+            padding: 0.4rem 0;
+        }
+
         .detail-sidebar {
             background-color: var(--light-bg);
             padding: 2rem;
@@ -73,11 +96,32 @@
             margin-bottom: 1rem;
         }
 
+        .detail-meta-list {
+            display: grid;
+            gap: 0.5rem;
+        }
+
+        .detail-meta-item {
+            padding: 0.2rem 0;
+        }
+
+        .detail-meta-label {
+            display: block;
+            font-size: 0.9rem;
+            color: #6b7280;
+            margin-bottom: 0.1rem;
+        }
+
+        .detail-meta-value {
+            font-size: 1rem;
+            color: #1f2937;
+        }
+
         .media-showcase {
-            margin-top: 1.5rem;
+            margin-top: 1rem;
             display: grid;
             grid-template-columns: 1.5fr 1fr;
-            gap: 1.5rem;
+            gap: 1.25rem;
         }
 
         .media-video video {
@@ -109,8 +153,9 @@
 
         .back-link {
             display: inline-block;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
             color: var(--primary-color);
+            padding-top: 1rem;
             text-decoration: none;
             font-weight: 600;
             transition: color 0.3s ease;
@@ -152,42 +197,56 @@
             <p class="subtitle">Web-Based Point of Sale System</p>
         </div>
 
+        <div class="project-media-shell" aria-label="Aromatique media showcase">
+            <div class="project-media-video">
+                <video controls poster="../assets/aromatique-video-poster.svg">
+                    <source src="../assets/Aromatique Recording.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="project-media-carousel" data-carousel>
+                <div class="carousel-stage">
+                    <img class="carousel-image" src="../assets/Aromatique Sign In.png" alt="Aromatique sign in page screenshot">
+                    <img class="carousel-image active" src="../assets/Aromatique Landing.png" alt="Aromatique landing page screenshot">
+                    <img class="carousel-image" src="../assets/Aromatique Inventory.png" alt="Aromatique inventory page screenshot">
+                    <img class="carousel-image" src="../assets/Aromatique Checkout.png" alt="Aromatique checkout page screenshot">
+                    <img class="carousel-image" src="../assets/Aromatique Transactions.png" alt="Aromatique transactions page screenshot">
+                    <img class="carousel-image" src="../assets/Aromatique Report.png" alt="Aromatique report page screenshot">
+                    <img class="carousel-image" src="../assets/Aromatique Receipt.png" alt="Aromatique receipt page screenshot">
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" type="button" aria-label="Show previous screenshot">←</button>
+                    <span class="carousel-label">Screenshots</span>
+                    <button class="carousel-btn next" type="button" aria-label="Show next screenshot">→</button>
+                </div>
+            </div>
+
+            <div class="image-lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+                <div class="image-lightbox-content">
+                    <button class="lightbox-close" type="button" aria-label="Close large image view">×</button>
+                    <img src="" alt="" id="lightbox-image">
+                </div>
+            </div>
+        </div>
+
         <div class="project-detail">
             <div class="detail-content">
                 <div class="detail-main">
                     <h2>Project Overview</h2>
-                    <p>Aromatique is a modern, web-based Point of Sale (POS) system designed to streamline transaction management and inventory tracking for businesses. Built with scalable technologies, it provides a responsive interface accessible from any device with a web browser.</p>
+                    <p>Aromatique is a web-based Point of Sale (PoS) and inventory management system developed using Node.js during my third year at university. As a team project, it provided hands-on experience in backend web development, database integration with PostgreSQL, and collaborative software development while building a complete business management application.</p>
 
-                    <h2>Key Features</h2>
+                    <h2>My Contributions</h2>
                     <ul>
-                        <li>Real-time transaction processing and management</li>
-                        <li>Comprehensive inventory tracking system</li>
-                        <li>User-friendly dashboard for sales analytics</li>
-                        <li>Product catalog management</li>
-                        <li>Transaction history and reporting</li>
-                        <li>Multi-user support with role-based access</li>
+                        <li>Developed REST API endpoints for inventory and sales management using Node.js.</li>
+                        <li>Designed and integrated the PostgreSQL database schema and backend data operations.</li>
+                        <li>Implemented inventory tracking and sales transaction management features.</li>
+                        <li>Integrated frontend components with backend APIs to enable seamless data flow.</li>
+                        <li>Coordinated module integration, resolved compatibility issues, and participated in system testing.</li>
                     </ul>
-
                     <h2>Technical Implementation</h2>
-                    <p>The system leverages Node.js for the backend server, providing fast and efficient request handling. PostgreSQL database ensures data integrity and supports complex queries for analytics and reporting. The architecture follows RESTful API principles for scalability and maintainability.</p>
+                    <p>Aromatique uses a Node.js backend with RESTful APIs and PostgreSQL for data persistence. The application follows a modular structure to manage products, inventory, and sales while enabling communication between the frontend and backend.</p>
 
-                    <h2>Challenges & Solutions</h2>
-                    <p>One of the main challenges was ensuring real-time data consistency across concurrent transactions. This was solved by implementing proper transaction management and locking mechanisms in the PostgreSQL layer, combined with efficient query optimization.</p>
-
-                    <h2>Media Showcase</h2>
-                    <div class="media-showcase">
-                        <div class="media-video">
-                            <video controls poster="../assets/aromatique-video-poster.png">
-                                <source src="../assets/aromatique-demo.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                        <div class="media-gallery">
-                            <img src="../assets/aromatique-screenshot-1.png" alt="Aromatique screenshot 1">
-                            <img src="../assets/aromatique-screenshot-2.png" alt="Aromatique screenshot 2">
-                            <img src="../assets/aromatique-screenshot-3.png" alt="Aromatique screenshot 3">
-                        </div>
-                    </div>
                 </div>
 
                 <div class="detail-sidebar">
@@ -202,23 +261,34 @@
                     </div>
 
                     <div class="sidebar-section">
-                        <h3>Project Type</h3>
-                        <p>Web Application</p>
-                    </div>
-
-                    <div class="sidebar-section">
-                        <h3>Status</h3>
-                        <p>Completed & Deployed</p>
-                    </div>
-
-                    <div class="sidebar-section">
-                        <h3>Key Metrics</h3>
-                        <ul style="list-style: none; padding-left: 0;">
-                            <li style="padding: 0.5rem 0;">✓ Fast transaction processing</li>
-                            <li style="padding: 0.5rem 0;">✓ Scalable database schema</li>
-                            <li style="padding: 0.5rem 0;">✓ Cross-platform compatible</li>
+                        <h3>Key Features</h3>
+                        <ul class="feature-list">
+                            <li>Product and inventory management</li>
+                            <li>Sales transaction processing</li>
+                            <li>RESTful API backend</li>
+                            <li>PostgreSQL database integration</li>
+                            <li>Role-based user access</li>
                         </ul>
                     </div>
+
+                    <div class="sidebar-section">
+                        <h3>Project Details</h3>
+                        <div class="detail-meta-list">
+                            <div class="detail-meta-item">
+                                <span class="detail-meta-label">Type</span>
+                                <span class="detail-meta-value">Web Application</span>
+                            </div>
+                            <div class="detail-meta-item">
+                                <span class="detail-meta-label">Team Size</span>
+                                <span class="detail-meta-value">4 Members</span>
+                            </div>
+                            <div class="detail-meta-item">
+                                <span class="detail-meta-label">Development Period</span>
+                                <span class="detail-meta-value">Third Year (2025)</span>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
